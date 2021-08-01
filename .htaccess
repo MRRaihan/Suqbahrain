@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+<IfModule mod_negotiation.c>
+    Options -MultiViews
+</IfModule>
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://suqbahrain.com/$1 [R=301,L]
+
+# Redirect Trailing Slashes...
+#RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Handle Front Controller...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

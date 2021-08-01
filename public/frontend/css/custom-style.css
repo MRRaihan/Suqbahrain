@@ -1,0 +1,23 @@
+/* your custom style goes here */
+
+.blink{
+		
+	    background-color: red;
+		
+		text-align: center;
+		color: white;
+		margin-left:10px;
+		font-size: 23px;
+		font-weight:bolder;
+	}
+	.blink span{
+		
+	
+		
+		animation: blink 1s linear infinite;
+	}
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .5;}
+100%{opacity: 1;}
+}
